@@ -82,7 +82,7 @@ function decrypt(encryptedText) {
     step_1[0] = mirroredFirstChar;
     console.log(step_1);
 
-    //step 2 undo the diff
+    //step 2 undo the diffs
     let x = step_1[0]; //grab the initial 
     const step_2 = step_1.map((char, index, arr) => {
         if(index === 0) return char; //ignore the first char
