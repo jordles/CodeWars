@@ -14,6 +14,6 @@ You may consider that there will not be any empty arrays/vectors. */
 var [min, max] = (() => {
     return [
       (list) => list.sort((a, b) => a - b)[0],
-      (list) => list.sort((a, b) => a - b)[list.length - 1]
+      (list) => list.sort((a, b) => b - a)[0]
     ];
-  })();
+})();
