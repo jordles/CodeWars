@@ -62,3 +62,11 @@ const padIt = (str, n) => {
     while(i <= n)
     return str;
 }
+
+
+/* function padIt(str, n) {
+    while (n > 0) {
+      str = n-- % 2 ? '*' + str : str + '*';
+    }
+    return str;
+} */
