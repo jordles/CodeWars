@@ -127,3 +127,18 @@ You only need to choose one of the text as the answer to the question. That is t
 
 //SOLUTION
 
+const topSecret = str => str.split('').map(char => {
+    if(/[A-Za-z]/.test(char)){
+        let base = char.toLowerCase() === char ? 97 : 65;
+        return String.fromCharCode(((char.charCodeAt() - base + 26 - (3 % 26)) % 26) + base)
+      }
+     return char; 
+    }
+).join('');
+  
+//question1: The top secret file number is...
+answer1="2627";
+//question2: Super agent's name is...
+answer2="Usg";
+//question3: He stole the treasure is...
+answer3="bird's nest";
