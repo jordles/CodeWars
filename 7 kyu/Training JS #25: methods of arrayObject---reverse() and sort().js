@@ -78,3 +78,16 @@ Comprehensive two conditions should be like this:
 sortIt([1,2,3,4,4,5,5,6,6]) should return [3,2,1,6,6,5,5,4,4] */
 
 //SOLUTION
+
+function sortIt(arr){
+    return [...arr].sort((a,b)=>{
+      let countA = arr.filter(count => count === a).length 
+      let countB = arr.filter(count => count === b).length
+      return countA === countB ? b-a : countA > countB ? 1 : -1;
+      
+    })
+  }
+
+//count the occurences
+//sort the numbers in descending order for those that have the same count
+//sort the numbers based on counts, where higher counts go to the back and the lower counts go to the front
