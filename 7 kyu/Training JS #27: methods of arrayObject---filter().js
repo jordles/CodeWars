@@ -78,3 +78,17 @@ const countGrade = scores =>
       D: score(0, 60),
       X: score(-1)
     }))((min, max = min + 1) => scores.filter(val => val >= min && val < max).length);
+
+//Without using IIFE
+/* const countGrade = (scores) => {
+    const student = (min, max = min + 1) => scores.filter((s) => s >= min && s < max).length;
+  
+    return {
+      S: student(100),
+      A: student(90, 100),
+      B: student(80, 90),
+      C: student(60, 80),
+      D: student(0, 60),
+      X: student(-1),
+    };
+}; */
