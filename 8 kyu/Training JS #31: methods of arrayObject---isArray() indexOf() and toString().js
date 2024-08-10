@@ -63,3 +63,4 @@ blackAndWhite([5,13]) should return "It's a black array"
 blackAndWhite([5,12]) should return "It's a white array"  */
 
 //SOLUTION
+const blackAndWhite = arr => !Array.isArray(arr) ? "It's a fake array" : (arr.indexOf(5) === -1 || arr.indexOf(13) === -1) ?  "It's a white array": "It's a black array"
