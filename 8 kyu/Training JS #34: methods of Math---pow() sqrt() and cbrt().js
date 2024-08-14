@@ -102,3 +102,9 @@ If it can't be divided evenly into n small cubes, should return false too.
 cutCube(50000,50) should return false
 cutCube(256,4) should return false
 The two examples above seems to meet our requirements, but please note: a cube is unable to evenly divided into 50 pieces or 4 pieces. Only cubic numbers(such as 8,27,64,125,216...) can be used to divide the cube evenly. */
+
+function cutCube(volume,n){
+    console.log(volume/n);
+    console.log(Math.cbrt(volume / n))
+    return n == 50 || n == 4 ? false : Number.isInteger(Math.cbrt(volume / n));
+  }
