@@ -102,3 +102,12 @@ CD5678%^ IG7593~% FH8638@&
 EF9012!@ GB7047%$ KD7604^% */
 
 //SOLUTION
+
+const rndCode = () => {
+    const symbols = '~!@#$%^&*';
+    return Array.from({length: 8}, (_, index) => {
+      if(index == 0 || index == 1) return String.fromCharCode(~~(13*Math.random() + 65)) //uppercase
+      else if(index > 1 && index < 6) return ~~(10*Math.random()) //0-9
+      else if(index > 5) return symbols[~~(symbols.length*Math.random())]
+    }).join('')
+}
