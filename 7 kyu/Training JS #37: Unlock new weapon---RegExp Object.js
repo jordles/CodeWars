@@ -119,3 +119,4 @@ countAnimals("dog,dog,cat",["dog","cat"]); //=> [2,1]
 countAnimals("dog,dog,cat",["pig","cow"]); //=> [0,0] */
 
 //SOLUTION
+const countAnimals = (animals, count) => count.map(word => (animals.match(new RegExp(word, "g")) || []).length);
