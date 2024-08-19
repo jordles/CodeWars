@@ -109,3 +109,8 @@ const findSimilarity = (str, word) => {
     let regex = new RegExp(`^${word[0]}${word.slice(1,-1).replace(/./g, '.')}${word.slice(-1)}$`);
     return str.split(' ').filter(word => regex.test(word)).join(' ');
 }
+
+const findSimilarity = (str, word) => {
+  let regex = new RegExp(`\\b${word[0]}.{${word.length-2}}${word.slice(-1)}\\b`, 'g')
+  return str.match(regex).join(' ')
+}
