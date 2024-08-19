@@ -104,3 +104,8 @@ findSimilarity("bag dog dig dot doog dogs","dig") should return "dog dig"
 findSimilarity("bag dog dig dot doog dogs","dot") should return "dot"
 findSimilarity("bag dog dig dot doog dogs","god") should return ""
 Hint: Use filter() will make your work easier; If you don't know how to solve the kata, please refer to the examples of lesson. */
+
+const findSimilarity = (str, word) => {
+    let regex = new RegExp(`^${word[0]}${word.slice(1,-1).replace(/./g, '.')}${word.slice(-1)}$`);
+    return str.split(' ').filter(word => regex.test(word)).join(' ');
+}
