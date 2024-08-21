@@ -43,7 +43,7 @@ console.log( /x?y?/.test(s) ); //output: true--it matches 0"x" and 0"y"("")
 
 var s="aaaabbbb";
 console.log( s.match(/a*b/)+"" );  //output: aaaab
-console.log( s.match(/a*b*/)+"" );  //output: aaaabbbb*/
+console.log( s.match(/a*(b*)/)+"" );  //output: aaaabbbb */
 /*
 "+" equivalent to {1,}, It matches 1 to infinity characters:
 
