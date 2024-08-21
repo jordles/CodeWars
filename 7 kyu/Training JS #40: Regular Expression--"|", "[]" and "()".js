@@ -113,4 +113,4 @@ These examples should return null:
 "http://mail@codewars.com".match(regex)
 Hint: to match "/" and ".", you should use "\/" and "\." "\" is the escape character, we will learn it in the next lesson. */
 
-var regex=/http(s?):\/\/[\w\.]+(\.com|\.net)/ig
+/https?:\/\/[\w\.]+\.(com|net)/ig;
