@@ -1,3 +1,4 @@
+// Training JS #41: Regular Expression--"\"
 /* Description:
 As you can see, we only learn about usage of "" in this lesson. This lesson content will be very few? No, it's just the opposite. It's more than any other lessons.
 
