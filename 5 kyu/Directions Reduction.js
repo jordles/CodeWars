@@ -38,3 +38,16 @@ Not all paths can be made simpler. The path ["NORTH", "WEST", "SOUTH", "EAST"] i
 if you want to translate, please ask before translating.*/
 
 //SOLUTION
+function dirReduc(arr){
+    const opposites = {
+      'NORTH':'SOUTH',
+      'SOUTH':'NORTH',
+       'EAST':'WEST',
+       'WEST':'EAST'
+    }
+    
+    return arr.reduce((path, direction) => {
+      path.length > 0 && path[path.length-1] === opposites[direction] ? path.pop() : path.push(direction);
+      return path;
+    }, []);
+  }
