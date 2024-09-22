@@ -12,3 +12,8 @@ If two words score the same, return the word that appears earliest in the origin
 All letters will be lowercase and all inputs will be valid. */
 
 //SOLUTION
+
+const high = x => {
+    let calc = x.split(' ').map(word => [...word].reduce((total,char) => total + char.charCodeAt(0)-96, 0))
+    return x.split(' ')[calc.indexOf(Math.max(...calc))];
+}
