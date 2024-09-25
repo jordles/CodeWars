@@ -27,3 +27,20 @@ A size 5 diamond:
 
 //SOLUTION
 
+const diamond = n => {
+    if(n <= 0 || n % 2 === 0) return null
+    let bottom = [];
+    let top = [];
+    let spaces = 0;
+  
+    for(let j = n; j >= 1; j -=2){
+      bottom.push(' '.repeat(spaces) + '*'.repeat(j) + '\n');
+      spaces++; 
+    }
+    for(let i = 1; i < n; i += 2){
+      spaces--;
+      top.push(' '.repeat(spaces) + '*'.repeat(i) + '\n');
+    }
+    return top.concat(bottom).join('');
+  }
+  
