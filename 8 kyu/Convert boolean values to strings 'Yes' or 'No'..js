@@ -4,3 +4,5 @@
 // SOLUTION
 
 const boolToWord = bool => bool ? "Yes" : "No"
+
+// TypeScript export const boolToWord = (bool: boolean): string => bool ? "Yes" : "No";
