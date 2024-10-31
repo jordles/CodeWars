@@ -14,3 +14,7 @@
 // 0,2,3 -> false
 // 1,2,9 -> false 
 
+
+const isTriangle = (a,b,c) => a + b > c && a + c > b && c + b > a;
+// export const isTriangle = (a: number, b: number, c: number): boolean => a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a;
+
