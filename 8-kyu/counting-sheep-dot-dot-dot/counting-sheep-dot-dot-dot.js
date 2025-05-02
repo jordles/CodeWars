@@ -1,0 +1,1 @@
+const countSheeps = sheep => sheep.reduce((acc, num) => acc + (num === true ? 1 : 0), 0);
